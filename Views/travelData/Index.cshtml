@@ -1,0 +1,46 @@
+﻿@model IEnumerable<travelData>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index travel data</h1>
+
+<div class="ttable">
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Place Name
+            </th>
+            <th>
+              Audults
+            </th>
+            <th>
+                Child
+            </th>
+            <th>Amount</th>
+            <th>Days</th>
+            <th>Night</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+               <td>@obj.placeName</td>
+               <td>@obj.audults</td>
+               <td>@obj.child</td>
+               <td>@obj.amount</td>
+               <td>@obj.days</td>
+               <td>@obj.night</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+</div>
+
+
+
+
